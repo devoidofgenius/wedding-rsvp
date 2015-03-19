@@ -64,14 +64,13 @@ body {
    ================================================== */
 
 .time-contain {
+    background: url('https://s3.amazonaws.com/gracemikawedding/time_bg.jpg') repeat;
+    background-attachment: fixed;
+
     .container {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-
-    background: url('invites.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 
     .section-header h1 {
         color: white;
