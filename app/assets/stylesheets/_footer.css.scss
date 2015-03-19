@@ -1,0 +1,16 @@
+footer {
+  height: 100px;
+  background: $muted;
+  position: relative;
+  p {
+    text-transform: uppercase;
+    color: $pewter;
+  }
+  a {
+    color: $pewter;
+    &:hover {
+      text-decoration: none;
+      color: darken($pewter, 25%);
+    }
+  }
+}

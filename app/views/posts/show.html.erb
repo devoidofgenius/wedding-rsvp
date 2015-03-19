@@ -1,0 +1,48 @@
+<% provide(:title, "#{@post.title}") %>
+<%= render 'shared/nav' %>
+
+<section id="blog-post" class="push-down">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8">
+                <p>
+                <h1 class="title">
+                    <%= @post.title %>
+                </h1>
+                <% if logged_in? && current_user.admin? %>
+                    <%= link_to 'Edit', edit_post_path(@post) %>
+                    <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
+                </p>
+
+
+                <p class="post-info">By <strong><%= full_name(@post.user) %></strong> | Posted <%= @post.created_at.strftime("%B, %d, %Y") %> | Comments: <%= @post.comments.count %></p>
+
+
+                <p class="body">
+                    <%= simple_format @post.body %>
+                </p>
+
+                
+                <div class="comments">
+                    <h2><%= @post.comments.count %> Comments</h2>
+                    <hr>
+                    <%= render @post.comments %>
+
+                    <% if logged_in? %>
+                        <h3>Add a comment:</h3>
+                        <%= render 'comments/form' %>
+                    <% else %>
+                        <%= link_to "Login in to comment", login_path, class: "btn btn-default" %>
+
+                </div>
+                    <% end %>
+            </div>
+
+        </div>
+    </div>
+</section>
+<%= render 'shared/footer' %>

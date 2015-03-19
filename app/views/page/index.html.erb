@@ -1,0 +1,20 @@
+<% provide(:title, "Welcome") %>
+<%= render 'shared/nav' %>
+<%= render 'shared/welcome' %>
+<%= render 'shared/ourstory' %>
+<section>
+    <div class="time-contain" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="section-header">
+                <h1>Wedding Countdown</h1>
+            </div>
+            <div class="time">
+                <div id="DateCountdown" data-date="2015-09-26 04:00:00" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<%= render 'shared/events' %>
+<%= render 'shared/gifts' %>
+<%= render 'shared/photos' %>
+<%= render 'shared/footer' %>

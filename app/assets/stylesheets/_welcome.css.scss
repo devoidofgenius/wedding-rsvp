@@ -1,0 +1,41 @@
+#welcome {
+    position: relative;
+
+    .jumbotron {
+        height: 100vh;
+        background: url("walk.jpg") no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        margin: 0;
+    }
+
+    .couple {
+        text-align: center;
+        font-family: $main_font;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: lighten($pewter, 75%);
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        span.names {
+            font-weight: 600;
+            font-size: 48px;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 2px solid lighten($pewter, 75%);
+
+        }
+
+        span.date {
+            display: block;
+            font-size: 16px;
+            font-weight: 200;
+            padding-top: 5px;
+        }
+    }
+}

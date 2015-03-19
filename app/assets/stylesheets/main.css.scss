@@ -1,0 +1,134 @@
+/* ==================================================
+   IMPORTS
+   ================================================== */
+
+@import 'variables';
+@import 'nav';
+@import 'ourstory';
+@import 'welcome';
+@import 'events';
+@import 'gifts';
+/*@import 'posts';*/
+@import 'admin';
+@import 'session';
+@import 'footer';
+
+/* ==================================================
+   MAIN OVERRIDE
+   ================================================== */
+
+body {
+    font-family: $main_font;
+}
+
+.push-down {
+    margin-top: 50px;
+}
+
+/* ==================================================
+   SECTION STYLES
+   ================================================== */
+
+.section-header {
+    margin-bottom: 25px;
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $pewter;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $pewter;
+    }
+
+    &:after {
+        content: '';
+        height: 2px;
+        width: 150px;
+        display: block;
+        background: lighten($pewter, 40%);
+        margin: 0 auto;
+    }
+
+}
+
+/* ==================================================
+   Time Countdown
+   ================================================== */
+
+.time-contain {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    background: url('invites.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .section-header h1 {
+        color: white;
+        margin-top: 35px;
+    }
+}   
+/**
+ *  This element is created inside your target element
+ *  It is used so that your own element will not need to be altered
+ **/
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *  This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+
+/**
+ *  Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $main_font;
+    font-weight: 400;
+    color: white;
+}
+
+/**
+ *  Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: $accent_font;
+    font-size: 300%;
+    margin-top: 0.4em;
+    font-weight: 400;
+    color: white;
+}
+
+/* forms */
+#error_explanation {
+  color: #a94442;
+  ul {
+    color: #a94442;
+    margin: 0 0 30px 0;
+  }
+}

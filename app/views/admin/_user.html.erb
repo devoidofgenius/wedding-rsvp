@@ -1,0 +1,25 @@
+<% @users.each_with_index do |user, i| %>
+        <% i += 1 %>
+        <tr>
+        <th scope="row"><%= i %></th>
+        <td><%= link_to full_name(user), user %></td>
+        <td><%= mail_to user.email%></td>
+        <td class="text-center">
+        <% if user.activated? %>
+            <span class="label label-success">YES</span>
+        <% else %>
+            <span class="label label-danger">NO</span>
+        <% end %>
+        </td>
+        <td class="text-center">
+        <% if Guest.find_by user_id: user.id %>
+            <span class="label label-success">YES</span>
+        <% else %>
+            <span class="label label-danger">NO</span>
+        <% end %>
+        </td>
+        <td class="text-center">
+            <%= time_ago_in_words(user.activated_at) %> ago
+        </td>
+    </tr>
+<% end %>

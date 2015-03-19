@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> | Grace & Mika Wedding Website</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic|Raleway:600,400,200' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= flash_messages %>
+<%= yield %>
+
+<script type="text/javascript">
+    $('#nav').onePageNav({
+    currentClass: 'active',
+    changeHash: true,
+    scrollSpeed: 650,
+    filter: ':not(.external)'
+});
+
+$("#DateCountdown").TimeCircles({
+    "animation": "smooth",
+    "bg_width": 1,
+    "fg_width": 0.04,
+    "circle_bg_color": "#ffffff",
+    "time": {
+        "Days": {
+            "text": "Days",
+            "color": "#c2c4cb",
+            "show": true
+        },
+        "Hours": {
+            "text": "Hours",
+            "color": "#c2c4cb",
+            "show": true
+        },
+        "Minutes": {
+            "text": "Minutes",
+            "color": "#c2c4cb",
+            "show": true
+        },
+        "Seconds": {
+            "text": "Seconds",
+            "color": "#c2c4cb",
+            "show": true
+        }
+    }
+});
+
+$(window).resize(function(){
+    $('#DateCountdown').TimeCircles().rebuild();
+});
+
+$(window).stellar();
+
+</script>
+</body>
+</html>

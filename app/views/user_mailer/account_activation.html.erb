@@ -1,0 +1,11 @@
+<h1>Grace and Mika's Wedding Website</h1>
+
+<p>Hi <%= "#{@user.first_name} #{@user.last_name}" %>,</p>
+
+<p>
+Thank you for joining our wedding website! Please click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate your account", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+<p>Grace & Mika</p>

@@ -1,0 +1,49 @@
+<% provide(:title, "RSVP | Admin") %>
+
+<div id="wrapper">
+
+    <%= render 'sidebar' %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+        <a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><strong>RSVP List</strong><span class="pull-right">Total Guests:&nbsp;<span class="badge pull-right"><%= @total %></span></span></div>
+
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th class="text-center"><%= guest_sortable "ceremony" %></th>
+                                        <th class="text-center"><%= guest_sortable "reception" %></th>
+                                        <th class="text-center">Guests</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%= render 'rsvp' %>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /#page-content-wrapper -->
+
+</div> <!-- /#wrapper -->
+
+
+<%= render 'toggle_script' %>

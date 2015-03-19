@@ -1,0 +1,98 @@
+/* ==================================================
+   Navigation
+   ================================================== */
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+}
+
+.navbar-header {
+  text-align: center;
+
+  button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+
+}
+
+.nav > li > a {
+    color: $pewter;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    
+    &:hover, &:focus {
+        background-color: white;
+        color: darken($pewter, 15%);
+    }
+    
+}
+
+.navbar-custom {
+    background-color: white;
+
+    .navbar-collapse {
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .navbar-toggle {
+      border: none;
+      float: none;
+      margin: 0 auto;
+    }
+
+}
+
+.navbar-custom .navbar-nav > .active > a {
+  color: $raspberry;
+}
+
+.user-nav {
+
+  float: right;
+  margin-right: 100px;
+
+  &.nav li {
+    display: inline-block;
+
+    a {
+      padding: 16.5px;
+      font-size: 12px;
+    }
+  }
+
+}
+
+
+/* =======================================================
+   Media Queries
+   ================================================================= */
+
+/* Center navbar on screens bigger than 768px */
+@media (min-width: 768px) {
+  
+  .navbar .navbar-nav {
+    text-align: center;
+    text-transform: uppercase;
+    
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  .jumbotron {
+    padding: 200px 0;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin-left: 100px;
+  }
+}

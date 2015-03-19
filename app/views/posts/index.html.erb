@@ -1,0 +1,27 @@
+<% provide(:title, "Blog") %>
+<%= render 'shared/nav' %>
+
+<section id="blog-posts" class="push-down">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8">
+            
+                <% @posts.each_with_index do |post, i| %>
+                    <div class="post-wrapper">
+                        <h2 class="title"><%= link_to post.title, post %></h2>
+                        <p class="post-info">By <strong><%= full_name(post.user) %></strong> | Posted <%= post.created_at.strftime("%B, %d, %Y") %> | Comments: <%= post.comments.count %></p>
+                        <p><%= post.body.truncate_words(50, omission: ' [...]') %></p>
+                    </div>
+                    <% if i <= 1 %>
+                    <hr>
+                    <% end %>
+                <% end %>
+
+            </div>            
+        </div>
+    </div>    
+</section>
+<%= render 'shared/footer' %>

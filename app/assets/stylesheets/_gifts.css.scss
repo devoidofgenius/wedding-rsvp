@@ -1,0 +1,38 @@
+#gifts {
+    margin-bottom: 50px;
+
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: lighten($pewter, 25%);
+    }
+
+    .section-header {
+
+    }
+
+    .logos {
+        margin-top: 50px;
+    }
+
+    .bbb {
+        height: 102px;
+        width: 275px;
+    }
+
+    .target {
+        height: 59px;
+        width: 275px;
+    }
+    .amazon {
+        height: 84px;
+        width: 275px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .bbb, .target, .amazon {
+        margin: 20px;
+    }
+}

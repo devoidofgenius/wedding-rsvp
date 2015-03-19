@@ -1,0 +1,54 @@
+<% provide(:title, "Users | Admin") %>
+
+<div id="wrapper">
+
+    <%= render 'sidebar' %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+            <a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading"><strong>All Users</strong></div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th><%= user_sortable "last_name", "Name" %></th>
+                                            <th>Email</th>
+                                            <th class="text-center">Activated</th>
+                                            <th class="text-center">RSVP</th>
+                                            <th class="text-center">User Created</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <%= render 'user' %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <%= will_paginate @users %>
+                    </div>
+                </div>
+        </div>
+
+    </div> <!-- /#page-content-wrapper -->
+
+</div> <!-- /#wrapper -->
+
+
+<%= render 'toggle_script' %>

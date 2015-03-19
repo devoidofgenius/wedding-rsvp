@@ -1,0 +1,44 @@
+#events {
+    padding-top: 50px;
+    margin-bottom: 50px;
+
+    .section-header {
+        margin-top: 50px;
+    }
+
+    h4 {
+        color: $pewter;
+        font-weight: 600;
+    }
+
+    p {
+        padding-bottom: 7px;
+        color: darken($pewter, 25%);
+    }
+
+    small {
+        display: block;
+        padding-top: 2px;
+
+        i {
+            color: $pewter;
+        }
+
+        a, span {
+            color: lighten($pewter, 25%);
+            text-decoration: none;
+        }
+        a:hover {
+            color: $pewter;
+        }
+    }
+
+    img {
+        padding: 5px;
+        border: 1px solid $muted;
+    }
+    .accomodations a {
+        color: $pewter;
+        text-decoration: underline;
+    }
+}

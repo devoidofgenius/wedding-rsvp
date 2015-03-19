@@ -1,0 +1,23 @@
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <%= link_to "WEDDING ADMIN", dashboard_path %>
+                </li>
+                <li>
+                    <%= link_to "USERS", dashboard_users_path %>
+                </li>
+                <li>
+                    <%= link_to "RSVP", dashboard_rsvp_path %>
+                </li>
+                <li>
+                    <%= link_to "POSTS", dashboard_posts_path %>
+                </li>
+                <li>
+                    <%= link_to "OUR SITE", root_path %>
+                </li>
+                <li>
+                    <strong><%= link_to "LOG OUT", logout_path, method: "delete" %></strong>
+                </li>
+            </ul>
+        </div> <!-- /#sidebar-wrapper -->

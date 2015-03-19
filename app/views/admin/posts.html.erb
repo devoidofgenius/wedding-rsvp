@@ -1,0 +1,49 @@
+<% provide(:title, "Posts | Admin") %>
+
+<div id="wrapper">
+
+    <%= render 'sidebar' %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+        <a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">
+                        <strong>Latest Posts</strong><i class="fa fa-plus-circle pull-right"><%= link_to " Add New Post", new_post_path %></i>
+                        </div>
+
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Post Title</th>
+                                        <th>Post Date</th>
+                                        <th class="text-center">Posted By</th>
+                                        <th class="text-center"># of Comments</th>
+                                        <th class="text-center">Edit & Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%= render 'posts' %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /#page-content-wrapper -->
+
+</div> <!-- /#wrapper -->
+
+
+<%= render 'toggle_script' %>
