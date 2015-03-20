@@ -4,8 +4,12 @@
     .jumbotron {
         height: 100vh;
         background: url("https://s3.amazonaws.com/gracemikawedding/walk.jpg") no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
         background-attachment: fixed;
+        background-position-x: center !important;
         position: relative;
         margin: 0;
     }

@@ -37,8 +37,21 @@
         padding: 5px;
         border: 1px solid $muted;
     }
-    .accomodations a {
-        color: $pewter;
-        text-decoration: underline;
+    .accomodations {
+        p {
+            padding: 15px;
+        }
+
+        a {
+            color: $pewter;
+            text-decoration: underline;
+        }
     }
+}
+
+
+@media (max-width: 768px) {
+ .event-obj {
+    margin-bottom: 50px;
+ } 
 }

@@ -6,7 +6,7 @@ class AdminController < ApplicationController
   end
 
   def users
-    @users = User.order(user_sort_column + " " + sort_direction).paginate(per_page: 2, page: params[:page])
+    @users = User.order(user_sort_column + " " + sort_direction).paginate(per_page: 20, page: params[:page])
   end
 
   def posts
@@ -14,7 +14,7 @@ class AdminController < ApplicationController
   end
 
   def rsvp
-    @guests = Guest.order(guest_sort_column + " " + sort_direction)
+    @guests = Guest.order(guest_sort_column + " " + sort_direction).paginate(per_page: 20, page: params[:page])
     
     @count = Array.new
 

@@ -24,7 +24,7 @@
     padding: 15px;
     
     &:hover, &:focus {
-        background-color: white;
+        background-color: transparent;
         color: darken($pewter, 15%);
     }
     
@@ -51,20 +51,19 @@
   color: $raspberry;
 }
 
-.user-nav {
+.navbar-right > li > a {
+  font-size: 12px;
+}
 
-  float: right;
-  margin-right: 100px;
+.open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: transparent;
+  border: none;
+}
 
-  &.nav li {
-    display: inline-block;
-
-    a {
-      padding: 16.5px;
-      font-size: 12px;
-    }
-  }
-
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: darken($pewter, 15%);
+  background-color: transparent;
 }
 
 
@@ -92,7 +91,13 @@
 }
 
 @media (min-width: 992px) {
-  .navbar-nav {
+  #nav {
     margin-left: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  #nav a {
+    font-size: 14px;
   }
 }
