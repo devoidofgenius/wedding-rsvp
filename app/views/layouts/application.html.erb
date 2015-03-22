@@ -11,11 +11,12 @@
 </head>
 <body>
 <%= flash_messages %>
+<%= render 'shared/nav' %>
 <%= yield %>
+<%= render "shared/footer" %>
 
 <script type="text/javascript">
     $('#nav').onePageNav({
-    currentClass: 'active',
     changeHash: true,
     scrollSpeed: 650,
     filter: ':not(.external)'

@@ -13,6 +13,9 @@
 
     .logos {
         margin-top: 50px;
+        .col-md-6 {
+            height: 102px;
+        }
     }
 
     .bbb {
@@ -23,6 +26,7 @@
     .target {
         height: 59px;
         width: 275px;
+        margin-top: 25px;
     }
     .amazon {
         height: 84px;

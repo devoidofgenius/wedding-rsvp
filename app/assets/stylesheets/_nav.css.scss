@@ -24,7 +24,7 @@
     padding: 15px;
     
     &:hover, &:focus {
-        background-color: transparent;
+        background-color: white;
         color: darken($pewter, 15%);
     }
     
@@ -74,13 +74,15 @@
 /* Center navbar on screens bigger than 768px */
 @media (min-width: 768px) {
   
-  .navbar .navbar-nav {
-    text-align: center;
-    text-transform: uppercase;
+  .navbar {
+    .navbar-nav {
+      text-align: center;
+      text-transform: uppercase;
     
-    > li {
-      float: none;
-      display: inline-block;
+      > li {
+        float: none;
+        display: inline-block;
+      }
     }
   }
 
@@ -88,6 +90,12 @@
     padding: 200px 0;
   }
 
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 40px !important;
+  }
 }
 
 @media (min-width: 992px) {

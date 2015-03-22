@@ -10,7 +10,6 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= full_name(current_user) %> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <% if current_user.admin? %>
                                 <li><%= link_to "Dashboard", dashboard_path %></li>
@@ -25,22 +24,22 @@
                 <% end %>
                 </ul>
                 <ul class="main-nav nav navbar-nav" id="nav">
-                    <li><%= link_to "Welcome", "/" %></li>
+                    <li>
+                        <%= link_to "/" do %>
+                        <i class="fa fa-home fa-lg"></i>
+                        <% end %>
+                    </li>
                     <li><%= link_to "Our Story", "/#ourstory" %></li>
                     <li><%= link_to "Events", "/#events" %></li>
                     <li><%= link_to "Gifts", "/#gifts" %></li>
                     <li><%= link_to "Photos", "/#photos" %></li>
-                    <% if params[:controller] == 'posts' && %w(index new edit show).include?(params[:action]) %>
-                    <li class="active">
-                    <% else %>
                     <li>
-                    <% end %>
-                    <%= link_to "Blog", posts_path, class: "external" %>
+                        <%= link_to "Blog", posts_path, class: "external" %>
                     </li>
                     <% if logged_in? %>
-                    <li>
-                        <%= link_to "RSVP", guests_path, class: "external" %>
-                    </li>
+                        <li>
+                            <%= link_to "RSVP", guests_path, class: "external" %>
+                        </li>
                     <% end %>
                 </ul>
             </div><!--/.nav-collapse -->

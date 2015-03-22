@@ -1,16 +1,14 @@
 footer {
-  height: 100px;
-  background: $muted;
   position: relative;
-  p {
-    text-transform: uppercase;
-    color: $pewter;
-  }
+  height: 100px;
+  margin-top: 75px;
   a {
-    color: $pewter;
+    img {
+      height: 25px;
+      width: 137px;
+    }
     &:hover {
       text-decoration: none;
-      color: darken($pewter, 25%);
     }
   }
 }
