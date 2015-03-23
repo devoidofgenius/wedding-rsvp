@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'simple_form', '~> 3.1.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

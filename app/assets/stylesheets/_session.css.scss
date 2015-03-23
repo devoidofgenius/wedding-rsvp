@@ -1,3 +1,47 @@
 .remember {
     margin-left: 20px;
 }
+
+.edit-user {
+    h3 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-bottom: 25px;
+        color: $muted;
+    }
+}
+
+.signup {
+    .form-group {
+        margin: 0;
+        input {
+            margin-bottom: 15px;
+        }
+    }
+    input#user_wedding_code {
+        margin-bottom: 0;
+    }
+
+    .help-block {
+        color: $raspberry;
+    }
+
+}
+
+.session_header {
+    color: $raspberry;
+}
+
+.session_info {
+        font-size: 14px;
+        color: darken($muted, 15%);
+}
+
+.new_user {
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}

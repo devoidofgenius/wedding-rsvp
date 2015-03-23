@@ -7,7 +7,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="container-fluid">
+        <div class="container-fluid push-down">
         <a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -24,9 +24,9 @@
                                 <thead>
                                     <tr>
                                         <th>Post Title</th>
-                                        <th>Post Date</th>
-                                        <th class="text-center">Posted By</th>
-                                        <th class="text-center"># of Comments</th>
+                                        <th class="hidden-xs">Post Date</th>
+                                        <th class="text-center hidden-xs">Posted By</th>
+                                        <th class="text-center hidden-xs"># of Comments</th>
                                         <th class="text-center">Edit & Delete</th>
                                     </tr>
                                 </thead>
@@ -39,6 +39,9 @@
 
                 </div>
             </div>
+                <nav class="paginate">
+                    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+                </nav>
         </div>
 
     </div> <!-- /#page-content-wrapper -->

@@ -3,21 +3,14 @@
 
 <div class="container push-down">
   <div class="row">
-    <div class="col-md-4 col-md-push-8">
-      <div>
-        <%= gravatar_for @user %>
-        <%= full_name(current_user) %>
-        <p><a change</a></p>
+    <div class="col-md-6 col-md-offset-3">
+      <p class="text-center"><%= gravatar_for @user %></p>
+      <h4 class="text-center"><%= full_name(current_user) %></h4>
+      <p class="text-center"><a href="//en.gravatar.com/site/login">Edit Image</a></p>
+      <div class="edit-user">
+        <h3><strong>Name and Password</strong></h3>
+        <p>Change your name and/or password.</p>
       </div>
-      <div class="list-group">
-        <a href="#" class="list-group-item">Name and Password</a>
-        <a href="http://gravatar.com/emails" target=_blank class="list-group-item">Profile Image</a>
-        <a href="#" class="list-group-item">Link 3</a>
-        <a href="#" class="list-group-item">Link 4</a>
-        <a href="#" class="list-group-item">Link 5</a>
-      </div>
-    </div>
-    <div class="col-md-8 col-md-pull-4">
       <%= simple_form_for @user do |f| %>
         <%= render 'shared/error_messages' %>
 

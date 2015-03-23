@@ -14,7 +14,7 @@ class GuestsController < ApplicationController
             redirect_to root_path
             flash[:success] = "Thank you for filling out our RSVP."
         else
-            redirect_to root_path
+            render "index"
             flash[:warning] = "You've already submitted your RSVP."
         end
     end

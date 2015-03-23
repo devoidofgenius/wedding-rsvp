@@ -3,7 +3,7 @@
         <tr>
         <th scope="row"><%= i %></th>
         <td><%= link_to full_name(user), user %></td>
-        <td><%= mail_to user.email%></td>
+        <td class="hidden-xs"><%= mail_to user.email%></td>
         <td class="text-center">
         <% if user.activated? %>
             <span class="label label-success">YES</span>
@@ -18,7 +18,7 @@
             <span class="label label-danger">NO</span>
         <% end %>
         </td>
-        <td class="text-center">
+        <td class="text-center hidden-xs">
         <% if user.activated_at? %>
             <%= time_ago_in_words(user.activated_at) %> ago
         <% else %>

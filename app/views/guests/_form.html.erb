@@ -1,21 +1,10 @@
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6 col-md-offset-3">
     <%= simple_form_for(@guest, html: { class: 'form-horizontal' }) do |f| %>
-      <% if @guest.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
-
-          <ul>
-          <% @guest.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-        <%= f.input :ceremony, as: :radio_buttons, label: "Will you be attending the ceremony?" %><br>
-        <%= f.input :reception, as: :radio_buttons, label: "Will you be attending the reception?" %><br>
-        <%= f.input :party, collection: 0..10, prompt: "Number of guests attending?", label: "How many guests will be attending? *including yourself" %><br>
-        <%= f.button :submit, "Submit RSVP" %>
+        <%= f.input :ceremony, as: :radio_buttons, collection: [["Accepts with plesure", true], ["Declines with regrets", false]], label: "Will you be attending the ceremony?" %><br>
+        <%= f.input :reception, as: :radio_buttons, collection: [["Accepts with plesure", true], ["Declines with regrets", false]], label: "Will you be attending the reception?" %><br>
+        <%= f.input :party, collection: 0..10, prompt: "" ,label: "Number of guests attending? (Including yourself)" %><br>
+        <%= f.button :submit, "Submit RSVP", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

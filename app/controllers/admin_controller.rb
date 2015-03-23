@@ -10,7 +10,7 @@ class AdminController < ApplicationController
   end
 
   def posts
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.all.order('created_at DESC').paginate(per_page: 20, page: params[:page])
   end
 
   def rsvp

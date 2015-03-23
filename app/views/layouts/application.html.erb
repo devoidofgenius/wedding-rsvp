@@ -11,9 +11,9 @@
 </head>
 <body>
 <%= flash_messages %>
-<%= render 'shared/nav' %>
+<%= render 'shared/nav' unless params[:controller] == 'admin' && %w(index posts rsvp users).include?(params[:action]) %>
 <%= yield %>
-<%= render "shared/footer" %>
+<%= render "shared/footer" unless params[:controller] == 'admin' && %w(index posts rsvp users).include?(params[:action]) %>
 
 <script type="text/javascript">
     $('#nav').onePageNav({

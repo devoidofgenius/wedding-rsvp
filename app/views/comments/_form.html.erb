@@ -1,8 +1,8 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
+<%= simple_form_for([@post, @post.comments.build]) do |f| %>
     <p>
-        <%= f.text_area :body, class: "form-control", rows: "3"  %>
+        <%= f.input :body, class: "form-control", rows: "3", label: false  %>
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.button :submit, "Submit Comment", class: "btn btn-primary" %>
     </p>
 <% end %>

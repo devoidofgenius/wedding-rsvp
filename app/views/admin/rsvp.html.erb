@@ -7,7 +7,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="container-fluid">
+        <div class="container-fluid push-down">
         <a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -21,9 +21,9 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th class="hidden-xs">#</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th class="hidden-xs">Email</th>
                                         <th class="text-center"><%= guest_sortable "ceremony" %></th>
                                         <th class="text-center"><%= guest_sortable "reception" %></th>
                                         <th class="text-center">Guests</th>
@@ -39,6 +39,9 @@
 
                 </div>
             </div>
+                <nav class="paginate">
+                    <%= will_paginate @guests, renderer: BootstrapPagination::Rails %>
+                </nav>
         </div>
 
     </div> <!-- /#page-content-wrapper -->

@@ -1,9 +1,9 @@
 <% @guests.each_with_index do |guest, i| %>
         <% i += 1 %>
         <tr>
-        <th scope="row"><%= i %></th>
+        <th scope="row" class="hidden-xs"><%= i %></th>
         <td><%= link_to full_name(guest.user), guest.user %></td>
-        <td><%= mail_to guest.user.email%></td>
+        <td class="hidden-xs"><%= mail_to guest.user.email%></td>
         <td class="text-center">
             <% if guest.ceremony? %>
                 <span class="label label-success">YES</span>

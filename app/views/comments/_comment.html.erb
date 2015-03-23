@@ -1,16 +1,23 @@
 <div class="comment">
     <div class="comment-content">
-        <p class="comment-name"><%= full_name(comment.user) %></p>
-        <p class="comment-body"><%= comment.body %></p>
-        <p class="comment-time">
-            <%= time_ago_in_words(comment.created_at) %> Ago 
-            <% if logged_in? && current_user?(comment.user) || logged_in? && current_user.admin? %>
-                | <%= link_to 'Delete', [comment.post, comment], method: :delete, class: "button", data: { confirm: "Are you sure?" } %>
-            <% end %>
-            <hr>
+        <div class="media">
+            <div class="media-left">
+                <%= comment_gravatar_for comment.user %>
+            </div>
+            <div class="media-body">
+                <p class="comment-name">
+        <strong><%= full_name(comment.user) %></strong>
+        <% if logged_in? && current_user?(comment.user) || logged_in? && current_user.admin? %>
+            <%= link_to 'Delete', [comment.post, comment], method: :delete, class: "button pull-right", data: { confirm: "Are you sure?" } %>
+        <% end %>
         </p>
+        <p class="comment-time">Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+            </div>
+        </div> 
+        
+        <p class="comment-body"><%= comment.body %></p>
     </div>
-
+    <hr>
 
 
 </div>
