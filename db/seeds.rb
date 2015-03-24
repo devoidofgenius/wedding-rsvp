@@ -14,3 +14,23 @@ User.create!(first_name:  "Chris",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
+
+User.create!(first_name:  "Grace",
+             last_name: "Dunlap",
+             wedding_code: "gracemika2015",
+             email: "grace.md13@gmail.com",
+             password:              "gracemika2015",
+             password_confirmation: "gracemika2015",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(first_name:  "Mika",
+             last_name: "Labergerie",
+             wedding_code: "gracemika2015",
+             email: "mikalabergerie@gmail.com",
+             password:              "gracemika2015",
+             password_confirmation: "gracemika2015",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
