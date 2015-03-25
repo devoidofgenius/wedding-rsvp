@@ -43,3 +43,15 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    #welcome {
+        .jumbotron {
+            background-attachment: initial;
+        }
+    }
+
+    .time-contain {
+        background-attachment: initial;
+    }
+}

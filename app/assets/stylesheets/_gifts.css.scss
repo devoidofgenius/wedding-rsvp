@@ -7,10 +7,6 @@
         color: lighten($pewter, 25%);
     }
 
-    .section-header {
-
-    }
-
     .logos {
         margin-top: 50px;
         .col-md-6 {
@@ -18,19 +14,21 @@
         }
     }
 
+    .visa {
+        height: 169px;
+        width: 275px;
+    }
+
     .bbb {
         height: 102px;
         width: 275px;
+        margin-top: 40px;
     }
 
     .target {
         height: 59px;
         width: 275px;
-        margin-top: 25px;
-    }
-    .amazon {
-        height: 84px;
-        width: 275px;
+        margin-top: 50px;
     }
 }
 
