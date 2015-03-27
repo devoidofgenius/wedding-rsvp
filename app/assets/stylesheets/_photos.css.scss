@@ -1,7 +1,11 @@
 #photos {
     margin-bottom: 25px;
 
-    .col-md-4 {
-        padding: 5px;
+    .img {
+        margin: 10px 0;
+    }
+
+    .image-responsive {
+        margin: 10px auto;
     }
 }
