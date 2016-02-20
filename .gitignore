@@ -11,11 +11,25 @@
 *.tar
 *.zip
 
-# Logs and databases #
+# Logs, databases and other stuff #
 ######################
 *.log
 *.sql
 *.sqlite
+
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
 
 # OS generated files #
 ######################
@@ -36,3 +50,7 @@ bower_components/
 *.css.map
 build/
 dist/
+
+# SECRETS #
+config/initializers/secret_token.rb
+config/secrets.yml
